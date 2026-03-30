@@ -17,7 +17,7 @@ My solutions to all problem sets from [CS50's Introduction to Programming with P
 | Week 6 | File I/O | [`lines`](week6/lines.py), [`pizza`](week6/pizza.py), [`scourgify`](week6/scourgify.py), [`shirt`](week6/shirt.py) |
 | Week 7 | Regular Expressions | [`numb3rs`](week7/numb3rs.py), [`watch`](week7/watch.py), [`um`](week7/um.py), [`working`](week7/working.py), [`response`](week7/response.py) |
 | Week 8 | Object-Oriented Programming | [`jar`](week8/jar.py), [`seasons`](week8/seasons.py), [`shirtificate`](week8/shirtificate.py) |
-| Week 9 | Final Project | [`project`](project/project.py) |
+| Week 9 | Final Project | [`project`](project/project.py), [`test_project`](project/test_project.py), [`requirements.txt`](project/requirements.txt), [`README`](project/README.md) |
 
 ---
 
@@ -183,17 +183,81 @@ Generates a personalised CS50 "Shirtificate" PDF using `fpdf2`, overlaying the u
 
 ### Week 9 — Final Project
 
-**[`project.py`](project/project.py) — Simple Moving Average Crossover Backtest**
+**Files:** [`project.py`](project/project.py) · [`test_project.py`](project/test_project.py) · [`requirements.txt`](project/requirements.txt) · [`README.md`](project/README.md)
 
-A quantitative trading backtester that simulates the classic MA crossover strategy on real historical stock data from Yahoo Finance.
+---
 
-- **`load_prices(ticker, start, end)`** — Downloads daily closing prices using `yfinance`
-- **`moving_average(prices, window)`** — Computes a simple rolling average over a sliding window
-- **`backtest(prices, short_ma, long_ma)`** — Simulates Golden Cross (buy) and Death Cross (sell) signals day by day
-- **`max_drawdown(equity)`** — Computes the worst peak-to-trough portfolio decline
-- **`sharpe_ratio(equity)`** — Computes the annualised risk-adjusted return
+#### Simple Moving Average Crossover Backtest
 
-**Outputs:** Strategy Return, Buy & Hold Return, Max Drawdown, Sharpe Ratio, Total Trades
+A command-line quantitative trading backtester written in pure Python. Given a stock ticker and two window sizes, it downloads real historical price data from Yahoo Finance, simulates a classic Moving Average Crossover strategy over a fixed date range (2020–2024), and reports a full set of performance metrics.
+
+#### How it works
+
+A **Moving Average (MA)** smooths out daily price noise by averaging the closing price over a rolling window of N days. This backtester compares two MAs simultaneously:
+
+- **Short MA** (e.g. 20-day) — reacts quickly to recent price moves
+- **Long MA** (e.g. 50-day) — reflects the slower, broader trend
+
+Two crossover signals drive all trading decisions:
+
+| Signal | Condition | Action |
+|--------|-----------|--------|
+| 🟢 Golden Cross | Short MA crosses **above** Long MA | **Buy** — go fully long |
+| 🔴 Death Cross | Short MA crosses **below** Long MA | **Sell** — liquidate entire position |
+
+The strategy holds a full position between signals (all-in / all-out), with a normalised starting capital of 1.0 for clean percentage reporting.
+
+#### Performance metrics
+
+| Metric | Description |
+|--------|-------------|
+| **Strategy Return** | Total % gain or loss from following crossover signals |
+| **Buy & Hold Return** | Passive benchmark: buy on day 1, sell on the last day |
+| **Max Drawdown** | Worst peak-to-trough portfolio decline observed (e.g. `-18.3%`) |
+| **Sharpe Ratio** | Annualised risk-adjusted return = `(mean daily return / std dev) × √252` |
+| **Total Trades** | Number of buy + sell executions over the backtest period |
+
+A Sharpe Ratio above 1.0 is generally considered acceptable; above 2.0 is good. A negative Sharpe means the strategy underperforms a risk-free asset.
+
+#### Code structure
+
+| Function | Purpose |
+|----------|---------|
+| `main()` | Entry point: prompts for ticker and window sizes, orchestrates all calls, prints results |
+| `load_prices(ticker, start, end)` | Downloads daily closing prices from Yahoo Finance via `yfinance`, returns a plain Python list |
+| `moving_average(prices, window)` | Computes a simple rolling average using a list comprehension; validates window size |
+| `backtest(prices, short_ma, long_ma)` | Core simulation loop: aligns MA series, detects crossovers day by day, tracks cash/shares/equity |
+| `max_drawdown(equity)` | Tracks running peak and measures worst trough; returns a negative float |
+| `sharpe_ratio(equity)` | Converts equity curve to daily returns, computes mean/std, annualises by `√252` |
+
+#### Tests — [`test_project.py`](project/test_project.py)
+
+Four `pytest` functions verify the core logic independently of live data or user input:
+
+- **`test_moving_average`** — checks output values for known inputs; asserts `ValueError` for window = 0 or window > data length
+- **`test_max_drawdown`** — verifies the drawdown formula against a hand-computed expected value (`[100, 110, 90, 95, 105]` → `-18.18%`)
+- **`test_sharpe_ratio`** — confirms a monotonically rising equity curve produces a positive Sharpe ratio
+- **`test_backtest_runs`** — constructs a synthetic price series and checks all expected keys are present in the returned dictionary
+
+#### Usage
+
+```bash
+pip install yfinance
+python project.py
+```
+
+```
+Ticker (e.g. AAPL): AAPL
+Short MA window (e.g. 20): 20
+Long MA window (e.g. 50): 50
+
+Ticker: AAPL
+Strategy Return: +42.31%
+Buy & Hold Return: +178.54%
+Max Drawdown: -18.24%
+Sharpe Ratio: 0.83
+Total Trades: 12
+```
 
 ---
 
