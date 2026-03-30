@@ -1,7 +1,5 @@
 # Simple Moving Average Crossover Backtest
 
-#### Video Demo: https://youtu.be/cBge9HXDw98
-
 #### Description:
 
 ## Overview
@@ -19,12 +17,12 @@ and the Sharpe ratio.
 ### Moving Average
 
 A moving average (MA) smooths out price fluctuations by averaging closing prices
-over a rolling window of N days. Formally, the moving average at time t with
-window N is:
+over a rolling window of $N$ days. Formally, the moving average at time $t$ with
+window $N$ is:
 
-    MA(t) = (P(t) + P(t-1) + ... + P(t-N+1)) / N
+$$\text{MA}(t) = \frac{1}{N} \sum_{i=0}^{N-1} P(t - i)$$
 
-where P(t) is the closing price on day t. A short-window MA (e.g. 20 days)
+where $P(t)$ is the closing price on day $t$. A short-window MA (e.g. 20 days)
 reacts quickly to recent price changes, while a long-window MA (e.g. 50 days)
 reflects the broader trend more slowly.
 
@@ -47,9 +45,16 @@ directional trends and tends to underperform in sideways or choppy markets.
 ### Strategy Return vs Buy and Hold Return
 
 Strategy return measures the total percentage gain or loss from following the
-crossover signals over the backtest period, starting with a normalized capital
-of 1.0. Buy and hold return is the return from simply buying on the first day
-of the backtest and selling on the last day, serving as a passive benchmark.
+crossover signals over the backtest period, starting with a normalised capital
+of $C_0 = 1.0$:
+
+$$R_{\text{strategy}} = \frac{C_{\text{final}} - C_0}{C_0} \times 100\%$$
+
+Buy and hold return is the return from simply buying on the first day
+of the backtest and selling on the last day, serving as a passive benchmark:
+
+$$R_{\text{buy\&hold}} = \frac{P_{\text{last}} - P_{\text{first}}}{P_{\text{first}}} \times 100\%$$
+
 Comparing these two reveals whether active signal-based trading adds value over
 simply holding the asset.
 
@@ -58,7 +63,7 @@ simply holding the asset.
 Maximum drawdown (MDD) measures the largest peak-to-trough decline in portfolio
 value over the backtest period:
 
-    MDD = (Trough Value - Peak Value) / Peak Value
+$$\text{MDD} = \frac{V_{\text{trough}} - V_{\text{peak}}}{V_{\text{peak}}}$$
 
 It captures the worst-case loss an investor would have experienced if they had
 bought at the highest point and sold at the lowest. A smaller (less negative)
@@ -69,12 +74,13 @@ MDD indicates a more stable and risk-controlled strategy.
 The Sharpe ratio measures risk-adjusted return — how much return is earned per
 unit of risk (volatility) taken:
 
-    Sharpe = (Mean Daily Return / Std Dev of Daily Returns) x sqrt(252)
+$$\text{Sharpe} = \frac{\bar{r}}{\sigma_r} \times \sqrt{252}$$
 
-The factor sqrt(252) annualizes the ratio, since there are approximately 252
-trading days in a year. A Sharpe ratio above 1.0 is generally considered
-acceptable, above 2.0 is considered good, and below 0 means the strategy
-performs worse than a risk-free asset.
+where $\bar{r}$ is the mean daily return and $\sigma_r$ is the standard deviation
+of daily returns. The factor $\sqrt{252}$ annualises the ratio, since there are
+approximately 252 trading days in a year. A Sharpe ratio above 1.0 is generally
+considered acceptable, above 2.0 is considered good, and below 0 means the
+strategy performs worse than a risk-free asset.
 
 ---
 
