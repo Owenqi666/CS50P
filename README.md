@@ -13,7 +13,7 @@ My solutions to all problem sets from [CS50's Introduction to Programming with P
 | Week 2 | Loops | `camel`, `coke`, `twttr`, `nutrition`, `plates` |
 | Week 3 | Exceptions | `fuel`, `grocery`, `outdated`, `taqueria` |
 | Week 4 | Libraries | `emojize`, `figlet`, `adieu`, `game`, `professor` |
-| Week 5 | Unit Tests | `test_twttr`, `test_bank`, `test_fuel`, `test_plates` |
+| Week 5 | Unit Tests | `test_twttr` + `twttr`, `test_bank` + `bank`, `test_plates` + `plates`, `test_fuel` + `fuel` |
 | Week 6 | File I/O | `lines`, `pizza`, `scourgify`, `shirt` |
 | Week 7 | Regular Expressions | `numb3rs`, `watch`, `um`, `working`, `response` |
 | Week 8 | Object-Oriented Programming | `jar`, `seasons`, `shirtificate` |
@@ -117,17 +117,19 @@ A maths quiz generator for levels 1–3 (single, double, and triple digit additi
 
 ### Week 5 — Unit Tests
 
-**`test_twttr.py` / `twttr.py`**
-Unit tests for the `shorten()` function: covers lowercase input, uppercase input, numbers, and special characters.
+Week 5 revisits four problems from earlier weeks and asks you to write proper `pytest` unit tests for them. Each problem produces a `test_*.py` file paired with the original implementation file.
 
-**`test_bank.py` / `bank.py`**
-Unit tests for the `value()` greeting function: tests the "hello", "h-word", and other greeting categories.
+**`test_twttr.py` + `twttr.py` — "Testing my twttr"** *(revisits Week 2)*
+Unit tests for the `shorten()` function: covers lowercase vowel removal, uppercase vowels, digits, and special characters that should be left unchanged.
 
-**`test_fuel.py` / `fuel.py`**
-Unit tests for `convert()` and `gauge()`: checks correct percentage conversion, edge cases (0%, 100%, rounding), and that exceptions are raised for invalid fractions.
+**`test_bank.py` + `bank.py` — "Back to the Bank"** *(revisits Week 1)*
+Unit tests for the `value()` greeting function: tests the `$0` "hello" case, the `$20` any-other-h-word case, and the `$100` everything-else case, all case-insensitively.
 
-**`test_plates.py` / `plates.py`**
-Unit tests for `is_valid()`: checks valid plates, plates that are too short/long, wrong starting characters, letters after numbers, leading zeros, and invalid symbols.
+**`test_plates.py` + `plates.py` — "Re-requesting a Vanity Plate"** *(revisits Week 2)*
+Unit tests for `is_valid()`: checks valid plates, plates that are too short/long, wrong starting characters, letters appearing after numbers, leading zeros in the numeric portion, and invalid symbols.
+
+**`test_fuel.py` + `fuel.py` — "Refueling"** *(revisits Week 3)*
+Unit tests for `convert()` and `gauge()`: checks correct percentage conversion, boundary values (0%, 1%, 99%, 100%), rounding, and that `ZeroDivisionError` / `ValueError` are raised for invalid input using `pytest.raises()`.
 
 ---
 
