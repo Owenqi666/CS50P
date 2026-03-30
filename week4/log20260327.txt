@@ -1,0 +1,150 @@
+2026-03-27 20:10:08.206 +00:00 [INF] This only goes file...
+2026-03-27 20:10:09.583 +00:00 [INF] Diagnostic
+2026-03-27 20:10:09.592 +00:00 [WRN] Code action yay
+2026-03-27 20:10:09.901 +00:00 [INF] Completion yay
+2026-03-27 20:10:09.904 +00:00 [INF] Configuring
+2026-03-27 20:10:09.904 +00:00 [INF] inside ctor
+2026-03-27 20:10:09.905 +00:00 [INF] Fooooo!
+2026-03-27 20:10:09.905 +00:00 [WRN] hi
+2026-03-27 20:10:09.915 +00:00 [WRN] Sync Handler
+2026-03-27 20:10:09.921 +00:00 [INF] Fooooo!
+2026-03-27 20:10:09.921 +00:00 [WRN] hi
+2026-03-27 20:10:09.923 +00:00 [INF] Fooooo!
+2026-03-27 20:10:09.923 +00:00 [WRN] hi references
+2026-03-27 20:10:09.924 +00:00 [INF] Fooooo!
+2026-03-27 20:10:09.924 +00:00 [WRN] hi document highlight
+2026-03-27 20:10:09.927 +00:00 [INF] Fooooo!
+2026-03-27 20:10:09.927 +00:00 [WRN] hi document symbol
+2026-03-27 20:10:10.028 +00:00 [DBG] Finding descriptors for initialize
+2026-03-27 20:10:10.183 +00:00 [DBG] Queueing "Serial":initialize:0 request for processing
+2026-03-27 20:10:10.214 +00:00 [DBG] Starting: Processing request initialize 0
+2026-03-27 20:10:10.224 +00:00 [DBG] Starting: Routing Request (0) initialize
+2026-03-27 20:10:10.231 +00:00 [VRB] Converting params for Request (0) initialize to OmniSharp.Extensions.LanguageServer.Protocol.Models.InternalInitializeParams
+2026-03-27 20:10:10.236 +00:00 [VRB] Converting params for Notification initialize to OmniSharp.Extensions.LanguageServer.Protocol.Models.InternalInitializeParams
+2026-03-27 20:10:10.631 +00:00 [VRB] Response value was OmniSharp.Extensions.LanguageServer.Protocol.Models.InitializeResult
+2026-03-27 20:10:10.635 +00:00 [DBG] Finished: Routing Request (0) initialize in 410ms
+2026-03-27 20:10:10.636 +00:00 [DBG] Finished: Processing request initialize 0 in 416ms
+2026-03-27 20:10:10.689 +00:00 [DBG] Finding descriptors for initialized
+2026-03-27 20:10:10.695 +00:00 [DBG] Queueing "Serial":initialized request for processing
+2026-03-27 20:10:10.703 +00:00 [DBG] Starting: Processing notification initialized
+2026-03-27 20:10:10.705 +00:00 [DBG] Starting: Routing Notification initialized
+2026-03-27 20:10:10.705 +00:00 [VRB] Converting params for Notification initialized to OmniSharp.Extensions.LanguageServer.Protocol.Models.InitializedParams
+2026-03-27 20:10:10.819 +00:00 [DBG] Finished: Routing Notification initialized in 113ms
+2026-03-27 20:10:10.819 +00:00 [DBG] Finished: Processing notification initialized in 115ms
+2026-03-27 20:10:10.821 +00:00 [DBG] Finding descriptors for workspace/didChangeConfiguration
+2026-03-27 20:10:10.823 +00:00 [DBG] Swapping from "Serial" to "Parallel"
+2026-03-27 20:10:10.823 +00:00 [DBG] Completing existing request process type "Serial"
+2026-03-27 20:10:10.828 +00:00 [DBG] Queueing "Parallel":workspace/didChangeConfiguration request for processing
+2026-03-27 20:10:10.828 +00:00 [DBG] Starting: Processing notification workspace/didChangeConfiguration
+2026-03-27 20:10:10.829 +00:00 [DBG] Starting: Routing Notification workspace/didChangeConfiguration
+2026-03-27 20:10:10.829 +00:00 [VRB] Converting params for Notification workspace/didChangeConfiguration to OmniSharp.Extensions.LanguageServer.Protocol.Models.DidChangeConfigurationParams
+2026-03-27 20:10:10.844 +00:00 [DBG] Finished: Routing Notification workspace/didChangeConfiguration in 15ms
+2026-03-27 20:10:10.845 +00:00 [DBG] Finished: Processing notification workspace/didChangeConfiguration in 16ms
+2026-03-27 20:10:10.851 +00:00 [DBG] Finding descriptors for textDocument/didOpen
+2026-03-27 20:10:10.862 +00:00 [VRB] Created attribute pseudocode::file:///Users/zjw/Desktop/CS50P/bitcoin.p
+2026-03-27 20:10:10.863 +00:00 [VRB] Looking for handler for descriptors textDocument/didOpen
+2026-03-27 20:10:10.863 +00:00 [VRB] Checking handler textDocument/didOpen:PseudoCode.LSP.TextDocumentSyncHandler
+2026-03-27 20:10:10.863 +00:00 [VRB] Registration options OmniSharp.Extensions.LanguageServer.Protocol.Models.TextDocumentOpenRegistrationOptions
+2026-03-27 20:10:10.864 +00:00 [VRB] Document Selector [pseudocode]
+2026-03-27 20:10:10.865 +00:00 [VRB] Handler Selected: PseudoCode.LSP.TextDocumentSyncHandler  via [pseudocode] (targeting OmniSharp.Extensions.JsonRpc.IJsonRpcNotificationHandler`1[[OmniSharp.Extensions.LanguageServer.Protocol.Models.DidOpenTextDocumentParams, OmniSharp.Extensions.LanguageProtocol, Version=0.19.0.0, Culture=neutral, PublicKeyToken=6d868dff454e6022]])
+2026-03-27 20:10:10.865 +00:00 [DBG] Swapping from "Parallel" to "Serial"
+2026-03-27 20:10:10.865 +00:00 [DBG] Cancelling any outstanding requests (switch from parallel to serial)
+2026-03-27 20:10:10.865 +00:00 [DBG] Completing existing request process type "Parallel"
+2026-03-27 20:10:10.866 +00:00 [DBG] Queueing "Serial":textDocument/didOpen request for processing
+2026-03-27 20:10:10.866 +00:00 [DBG] Starting: Processing notification textDocument/didOpen
+2026-03-27 20:10:10.866 +00:00 [DBG] Starting: Routing Notification textDocument/didOpen
+2026-03-27 20:10:10.866 +00:00 [VRB] Converting params for Notification textDocument/didOpen to OmniSharp.Extensions.LanguageServer.Protocol.Models.DidOpenTextDocumentParams
+2026-03-27 20:10:10.871 +00:00 [INF] file:///Users/zjw/Desktop/CS50P/bitcoin.p Open 
+2026-03-27 20:10:10.872 +00:00 [ERR] file:///Users/zjw/Desktop/CS50P/bitcoin.p not found
+2026-03-27 20:10:10.876 +00:00 [INF] Analysing: file:///Users/zjw/Desktop/CS50P/bitcoin.p
+2026-03-27 20:10:11.002 +00:00 [INF] Analysed file:///Users/zjw/Desktop/CS50P/bitcoin.p in 126ms
+2026-03-27 20:10:11.010 +00:00 [DBG] Finished: Routing Notification textDocument/didOpen in 143ms
+2026-03-27 20:10:11.010 +00:00 [DBG] Finished: Processing notification textDocument/didOpen in 144ms
+2026-03-27 20:10:11.020 +00:00 [DBG] Finding descriptors for textDocument/documentSymbol
+2026-03-27 20:10:11.024 +00:00 [VRB] Found attributes 1, ["pseudocode::file:///Users/zjw/Desktop/CS50P/bitcoin.p"]
+2026-03-27 20:10:11.026 +00:00 [VRB] Looking for handler for descriptors textDocument/documentSymbol
+2026-03-27 20:10:11.026 +00:00 [VRB] Checking handler textDocument/documentSymbol:PseudoCode.LSP.DocumentSymbolHandler
+2026-03-27 20:10:11.026 +00:00 [VRB] Registration options OmniSharp.Extensions.LanguageServer.Protocol.Models.DocumentSymbolRegistrationOptions
+2026-03-27 20:10:11.026 +00:00 [VRB] Document Selector [pseudocode]
+2026-03-27 20:10:11.026 +00:00 [VRB] Handler Selected: PseudoCode.LSP.DocumentSymbolHandler  via [pseudocode] (targeting OmniSharp.Extensions.JsonRpc.IJsonRpcRequestHandler`2[[OmniSharp.Extensions.LanguageServer.Protocol.Models.DocumentSymbolParams, OmniSharp.Extensions.LanguageProtocol, Version=0.19.0.0, Culture=neutral, PublicKeyToken=6d868dff454e6022],[OmniSharp.Extensions.LanguageServer.Protocol.Models.SymbolInformationOrDocumentSymbolContainer, OmniSharp.Extensions.LanguageProtocol, Version=0.19.0.0, Culture=neutral, PublicKeyToken=6d868dff454e6022]])
+2026-03-27 20:10:11.027 +00:00 [DBG] Swapping from "Serial" to "Parallel"
+2026-03-27 20:10:11.027 +00:00 [DBG] Completing existing request process type "Serial"
+2026-03-27 20:10:11.027 +00:00 [DBG] Queueing "Parallel":textDocument/documentSymbol:1 request for processing
+2026-03-27 20:10:11.028 +00:00 [DBG] Starting: Processing request textDocument/documentSymbol 1
+2026-03-27 20:10:11.028 +00:00 [DBG] Starting: Routing Request (1) textDocument/documentSymbol
+2026-03-27 20:10:11.028 +00:00 [VRB] Converting params for Request (1) textDocument/documentSymbol to OmniSharp.Extensions.LanguageServer.Protocol.Models.DocumentSymbolParams
+2026-03-27 20:10:11.028 +00:00 [VRB] Converting params for Notification textDocument/documentSymbol to OmniSharp.Extensions.LanguageServer.Protocol.Models.DocumentSymbolParams
+2026-03-27 20:10:11.087 +00:00 [VRB] Response value was OmniSharp.Extensions.LanguageServer.Protocol.Models.SymbolInformationOrDocumentSymbolContainer
+2026-03-27 20:10:11.091 +00:00 [DBG] Finished: Routing Request (1) textDocument/documentSymbol in 63ms
+2026-03-27 20:10:11.092 +00:00 [DBG] Finished: Processing request textDocument/documentSymbol 1 in 63ms
+2026-03-27 20:10:11.122 +00:00 [DBG] Finding descriptors for textDocument/documentSymbol
+2026-03-27 20:10:11.123 +00:00 [VRB] Found attributes 1, ["pseudocode::file:///Users/zjw/Desktop/CS50P/bitcoin.p"]
+2026-03-27 20:10:11.123 +00:00 [VRB] Looking for handler for descriptors textDocument/documentSymbol
+2026-03-27 20:10:11.123 +00:00 [VRB] Checking handler textDocument/documentSymbol:PseudoCode.LSP.DocumentSymbolHandler
+2026-03-27 20:10:11.123 +00:00 [VRB] Registration options OmniSharp.Extensions.LanguageServer.Protocol.Models.DocumentSymbolRegistrationOptions
+2026-03-27 20:10:11.124 +00:00 [VRB] Document Selector [pseudocode]
+2026-03-27 20:10:11.124 +00:00 [VRB] Handler Selected: PseudoCode.LSP.DocumentSymbolHandler  via [pseudocode] (targeting OmniSharp.Extensions.JsonRpc.IJsonRpcRequestHandler`2[[OmniSharp.Extensions.LanguageServer.Protocol.Models.DocumentSymbolParams, OmniSharp.Extensions.LanguageProtocol, Version=0.19.0.0, Culture=neutral, PublicKeyToken=6d868dff454e6022],[OmniSharp.Extensions.LanguageServer.Protocol.Models.SymbolInformationOrDocumentSymbolContainer, OmniSharp.Extensions.LanguageProtocol, Version=0.19.0.0, Culture=neutral, PublicKeyToken=6d868dff454e6022]])
+2026-03-27 20:10:11.124 +00:00 [DBG] Queueing "Parallel":textDocument/documentSymbol:2 request for processing
+2026-03-27 20:10:11.124 +00:00 [DBG] Starting: Processing request textDocument/documentSymbol 2
+2026-03-27 20:10:11.124 +00:00 [DBG] Starting: Routing Request (2) textDocument/documentSymbol
+2026-03-27 20:10:11.125 +00:00 [VRB] Converting params for Request (2) textDocument/documentSymbol to OmniSharp.Extensions.LanguageServer.Protocol.Models.DocumentSymbolParams
+2026-03-27 20:10:11.125 +00:00 [VRB] Converting params for Notification textDocument/documentSymbol to OmniSharp.Extensions.LanguageServer.Protocol.Models.DocumentSymbolParams
+2026-03-27 20:10:11.141 +00:00 [VRB] Response value was OmniSharp.Extensions.LanguageServer.Protocol.Models.SymbolInformationOrDocumentSymbolContainer
+2026-03-27 20:10:11.142 +00:00 [DBG] Finished: Routing Request (2) textDocument/documentSymbol in 17ms
+2026-03-27 20:10:11.142 +00:00 [DBG] Finished: Processing request textDocument/documentSymbol 2 in 17ms
+2026-03-27 20:10:13.180 +00:00 [DBG] Finding descriptors for textDocument/didClose
+2026-03-27 20:10:13.216 +00:00 [VRB] Found attributes 1, ["pseudocode::file:///Users/zjw/Desktop/CS50P/bitcoin.p"]
+2026-03-27 20:10:13.217 +00:00 [VRB] Looking for handler for descriptors textDocument/didClose
+2026-03-27 20:10:13.217 +00:00 [VRB] Checking handler textDocument/didClose:PseudoCode.LSP.TextDocumentSyncHandler
+2026-03-27 20:10:13.218 +00:00 [VRB] Registration options OmniSharp.Extensions.LanguageServer.Protocol.Models.TextDocumentCloseRegistrationOptions
+2026-03-27 20:10:13.218 +00:00 [VRB] Document Selector [pseudocode]
+2026-03-27 20:10:13.218 +00:00 [VRB] Handler Selected: PseudoCode.LSP.TextDocumentSyncHandler  via [pseudocode] (targeting OmniSharp.Extensions.JsonRpc.IJsonRpcNotificationHandler`1[[OmniSharp.Extensions.LanguageServer.Protocol.Models.DidCloseTextDocumentParams, OmniSharp.Extensions.LanguageProtocol, Version=0.19.0.0, Culture=neutral, PublicKeyToken=6d868dff454e6022]])
+2026-03-27 20:10:13.219 +00:00 [DBG] Queueing "Parallel":textDocument/didClose request for processing
+2026-03-27 20:10:13.224 +00:00 [DBG] Starting: Processing notification textDocument/didClose
+2026-03-27 20:10:13.225 +00:00 [DBG] Starting: Routing Notification textDocument/didClose
+2026-03-27 20:10:13.227 +00:00 [VRB] Converting params for Notification textDocument/didClose to OmniSharp.Extensions.LanguageServer.Protocol.Models.DidCloseTextDocumentParams
+2026-03-27 20:10:13.252 +00:00 [INF] file:///Users/zjw/Desktop/CS50P/bitcoin.p Close
+2026-03-27 20:10:13.261 +00:00 [DBG] Finished: Routing Notification textDocument/didClose in 35ms
+2026-03-27 20:10:13.262 +00:00 [DBG] Finished: Processing notification textDocument/didClose in 36ms
+2026-03-27 20:10:31.235 +00:00 [DBG] Finding descriptors for $/setTrace
+2026-03-27 20:10:31.295 +00:00 [DBG] Queueing "Parallel":$/setTrace request for processing
+2026-03-27 20:10:31.315 +00:00 [DBG] Starting: Processing notification $/setTrace
+2026-03-27 20:10:31.317 +00:00 [DBG] Starting: Routing Notification $/setTrace
+2026-03-27 20:10:31.317 +00:00 [VRB] Converting params for Notification $/setTrace to OmniSharp.Extensions.LanguageServer.Protocol.Models.SetTraceParams
+2026-03-27 20:10:31.346 +00:00 [DBG] Finished: Routing Notification $/setTrace in 29ms
+2026-03-27 20:10:31.347 +00:00 [DBG] Finished: Processing notification $/setTrace in 30ms
+2026-03-27 20:11:22.665 +00:00 [DBG] Finding descriptors for $/setTrace
+2026-03-27 20:11:22.669 +00:00 [DBG] Queueing "Parallel":$/setTrace request for processing
+2026-03-27 20:11:22.671 +00:00 [DBG] Starting: Processing notification $/setTrace
+2026-03-27 20:11:22.671 +00:00 [DBG] Starting: Routing Notification $/setTrace
+2026-03-27 20:11:22.672 +00:00 [VRB] Converting params for Notification $/setTrace to OmniSharp.Extensions.LanguageServer.Protocol.Models.SetTraceParams
+2026-03-27 20:11:22.704 +00:00 [DBG] Finished: Routing Notification $/setTrace in 32ms
+2026-03-27 20:11:22.705 +00:00 [DBG] Finished: Processing notification $/setTrace in 33ms
+2026-03-27 20:13:16.367 +00:00 [DBG] Finding descriptors for $/setTrace
+2026-03-27 20:13:16.375 +00:00 [DBG] Queueing "Parallel":$/setTrace request for processing
+2026-03-27 20:13:16.377 +00:00 [DBG] Starting: Processing notification $/setTrace
+2026-03-27 20:13:16.383 +00:00 [DBG] Starting: Routing Notification $/setTrace
+2026-03-27 20:13:16.383 +00:00 [VRB] Converting params for Notification $/setTrace to OmniSharp.Extensions.LanguageServer.Protocol.Models.SetTraceParams
+2026-03-27 20:13:16.389 +00:00 [DBG] Finished: Routing Notification $/setTrace in 5ms
+2026-03-27 20:13:16.389 +00:00 [DBG] Finished: Processing notification $/setTrace in 6ms
+2026-03-27 20:14:36.792 +00:00 [DBG] Finding descriptors for $/setTrace
+2026-03-27 20:14:36.826 +00:00 [DBG] Queueing "Parallel":$/setTrace request for processing
+2026-03-27 20:14:36.828 +00:00 [DBG] Starting: Processing notification $/setTrace
+2026-03-27 20:14:36.828 +00:00 [DBG] Starting: Routing Notification $/setTrace
+2026-03-27 20:14:36.829 +00:00 [VRB] Converting params for Notification $/setTrace to OmniSharp.Extensions.LanguageServer.Protocol.Models.SetTraceParams
+2026-03-27 20:14:36.850 +00:00 [DBG] Finished: Routing Notification $/setTrace in 21ms
+2026-03-27 20:14:36.851 +00:00 [DBG] Finished: Processing notification $/setTrace in 22ms
+2026-03-27 20:14:48.565 +00:00 [DBG] Finding descriptors for $/setTrace
+2026-03-27 20:14:48.566 +00:00 [DBG] Queueing "Parallel":$/setTrace request for processing
+2026-03-27 20:14:48.567 +00:00 [DBG] Starting: Processing notification $/setTrace
+2026-03-27 20:14:48.568 +00:00 [DBG] Starting: Routing Notification $/setTrace
+2026-03-27 20:14:48.568 +00:00 [VRB] Converting params for Notification $/setTrace to OmniSharp.Extensions.LanguageServer.Protocol.Models.SetTraceParams
+2026-03-27 20:14:48.571 +00:00 [DBG] Finished: Routing Notification $/setTrace in 2ms
+2026-03-27 20:14:48.571 +00:00 [DBG] Finished: Processing notification $/setTrace in 3ms
+2026-03-27 20:15:26.814 +00:00 [DBG] Finding descriptors for $/setTrace
+2026-03-27 20:15:26.825 +00:00 [DBG] Queueing "Parallel":$/setTrace request for processing
+2026-03-27 20:15:26.847 +00:00 [DBG] Starting: Processing notification $/setTrace
+2026-03-27 20:15:26.848 +00:00 [DBG] Starting: Routing Notification $/setTrace
+2026-03-27 20:15:26.849 +00:00 [VRB] Converting params for Notification $/setTrace to OmniSharp.Extensions.LanguageServer.Protocol.Models.SetTraceParams
+2026-03-27 20:15:26.860 +00:00 [DBG] Finished: Routing Notification $/setTrace in 11ms
+2026-03-27 20:15:26.860 +00:00 [DBG] Finished: Processing notification $/setTrace in 12ms
