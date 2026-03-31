@@ -53,7 +53,7 @@ $$R_{\text{strategy}} = \frac{C_{\text{final}} - C_0}{C_0} \times 100\%$$
 Buy and hold return is the return from simply buying on the first day
 of the backtest and selling on the last day, serving as a passive benchmark:
 
-$$R_{\text{B\&H}} = \frac{P_{\text{last}} - P_{\text{first}}}{P_{\text{first}}} \times 100\%$$
+$$R_{\text{BH}} = \frac{P_{\text{last}} - P_{\text{first}}}{P_{\text{first}}} \times 100\%$$
 
 Comparing these two reveals whether active signal-based trading adds value over
 simply holding the asset.
